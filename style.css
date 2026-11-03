@@ -1,29 +1,40 @@
-/* HEATWISE MOBILE APP DESIGN */
+/* =========================================
+   HEATWISE - HEAT STRESS ASSISTANT
+   Complete responsive app stylesheet
+========================================= */
+
+
+/* GENERAL RESET */
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #e9f3f2;
-    color: #183b43;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eaf5f5;
+    color: #18343d;
+    line-height: 1.6;
 }
 
 
-/* APP CONTAINER */
+/* MAIN APP CONTAINER */
 
 .app-container {
+    width: 100%;
     max-width: 480px;
     min-height: 100vh;
-    margin: auto;
-    background: #f8fbfa;
+    margin: 0 auto;
+    background: #f8fcfc;
     position: relative;
-    padding-bottom: 85px;
-    box-shadow: 0 0 35px rgba(20, 60, 60, 0.08);
+    padding-bottom: 95px;
+    overflow: hidden;
 }
 
 
@@ -33,60 +44,78 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 22px;
+    padding: 20px;
     background: #ffffff;
+    border-bottom: 1px solid #e5eeee;
 }
 
 .brand {
     display: flex;
     align-items: center;
-    gap: 11px;
+    gap: 12px;
 }
 
 .brand-icon {
-    background: #d8f4ed;
-    color: #078b78;
-    width: 40px;
-    height: 40px;
-    border-radius: 13px;
-    display: grid;
-    place-items: center;
+    width: 42px;
+    height: 42px;
+    background: #d8f4ef;
+    color: #087f75;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 23px;
 }
 
 .brand h1 {
-    font-size: 20px;
-    letter-spacing: -0.5px;
+    font-size: 21px;
+    color: #123d43;
+    line-height: 1.2;
 }
 
 .brand p {
     font-size: 9px;
-    color: #78918f;
     letter-spacing: 1.3px;
-    margin-top: 4px;
+    color: #779092;
 }
 
 .status-icon {
     font-size: 11px;
-    color: #078b78;
-    background: #e4f6ee;
-    padding: 8px 11px;
+    color: #168b70;
+    background: #e5f7ef;
+    padding: 7px 11px;
     border-radius: 20px;
 }
 
 
-/* HERO */
+/* GENERAL SECTION STYLING */
+
+section {
+    margin-bottom: 22px;
+}
+
+.eyebrow {
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.8px;
+    color: #148c82;
+    margin-bottom: 9px;
+}
+
+
+/* HOME / HERO SECTION */
 
 .hero-section {
-    margin: 15px;
-    min-height: 290px;
-    border-radius: 25px;
-    padding: 28px 20px;
+    margin: 0;
+    padding: 32px 22px 25px;
     background: linear-gradient(
-        135deg,
-        #d6f5ee,
-        #a6e5df
+        140deg,
+        #dff8f3,
+        #effafa,
+        #e5f3f8
     );
+    border-radius: 0 0 28px 28px;
     position: relative;
     overflow: hidden;
 }
@@ -94,177 +123,185 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 65%;
-}
-
-.eyebrow {
-    font-size: 9px;
-    letter-spacing: 1.5px;
-    font-weight: bold;
-    color: #168b7b;
 }
 
 .hero-content h2 {
-    font-size: 31px;
+    font-size: 34px;
     line-height: 1.15;
-    margin: 14px 0;
-    color: #16464b;
+    color: #123d43;
+    margin-bottom: 13px;
 }
 
 .hero-content p {
-    font-size: 12px;
-    line-height: 1.7;
-    color: #426c6d;
-    margin-bottom: 20px;
+    font-size: 14px;
+    color: #547078;
+    max-width: 290px;
+    margin-bottom: 22px;
 }
 
 .primary-button {
     display: inline-block;
-    background: #087f76;
-    color: white;
     text-decoration: none;
-    padding: 12px 15px;
-    border-radius: 10px;
-    font-size: 11px;
+    background: #087f75;
+    color: white;
+    padding: 12px 19px;
+    border-radius: 12px;
+    font-size: 13px;
     font-weight: bold;
+    transition: 0.2s ease;
 }
 
 .primary-button:hover {
-    background: #075e58;
+    background: #05675f;
+    transform: translateY(-2px);
 }
 
 
 /* DRINK ILLUSTRATIONS */
 
 .drink-display {
-    position: absolute;
-    right: 4px;
-    bottom: 15px;
-    width: 43%;
-    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 19px;
+    height: 145px;
+    margin-top: 18px;
+    position: relative;
 }
 
 .drink {
-    position: absolute;
-    bottom: 12px;
+    position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .bottle {
-    left: 10px;
-    z-index: 2;
+    height: 125px;
+    width: 58px;
 }
 
 .bottle-cap {
-    height: 12px;
-    width: 24px;
-    background: #ffffff;
+    width: 25px;
+    height: 10px;
+    background: #087f75;
     border-radius: 5px 5px 2px 2px;
+    position: absolute;
+    top: 0;
 }
 
 .bottle-neck {
-    width: 23px;
-    height: 15px;
-    background: #c8f1e9;
-    border-left: 2px solid #ffffff;
-    border-right: 2px solid #ffffff;
+    width: 24px;
+    height: 16px;
+    background: #8edbd0;
+    position: absolute;
+    top: 9px;
 }
 
 .bottle-body {
-    width: 62px;
-    height: 120px;
+    width: 54px;
+    height: 91px;
     background: linear-gradient(
-        90deg,
-        #b9ece7,
+        110deg,
+        #b7f1e8,
         #ffffff,
-        #8ddad5
+        #83d7cd
     );
-    border: 3px solid white;
-    border-radius: 15px 15px 19px 19px;
-    box-shadow: 0 10px 20px rgba(20, 100, 100, 0.15);
+    border: 2px solid #78c9bd;
+    border-radius: 12px 12px 16px 16px;
+    position: absolute;
+    bottom: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    color: #087f76;
+    align-items: center;
+    color: #087f75;
+    box-shadow: 0 7px 15px rgba(30, 110, 100, 0.12);
 }
 
 .bottle-body span {
-    font-size: 21px;
+    font-size: 17px;
     font-weight: bold;
 }
 
 .bottle-body small {
     font-size: 6px;
-    margin-top: 4px;
+    letter-spacing: 0.5px;
 }
 
+
 .juice {
-    left: 78px;
-    bottom: 24px;
-    z-index: 3;
+    height: 105px;
+    width: 58px;
 }
 
 .juice-glass {
-    width: 54px;
-    height: 85px;
+    width: 49px;
+    height: 80px;
+    border: 3px solid #b4d7d7;
+    border-top: none;
+    border-radius: 4px 4px 13px 13px;
     background: rgba(255, 255, 255, 0.65);
-    border: 3px solid white;
-    border-radius: 5px 5px 14px 14px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 8px 15px rgba(20, 100, 100, 0.12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .juice-liquid {
     position: absolute;
     bottom: 0;
+    height: 65%;
     width: 100%;
-    height: 72%;
     background: linear-gradient(
-        #ffcf65,
-        #f49b32
+        120deg,
+        #ffb13b,
+        #ff8b19,
+        #f36b0c
     );
 }
 
 .juice-glass span {
-    position: absolute;
-    top: 28px;
-    left: 13px;
+    position: relative;
+    z-index: 1;
     font-size: 20px;
 }
 
+
 .sports {
-    right: 0;
-    bottom: 15px;
+    height: 115px;
+    width: 58px;
 }
 
 .sports-cap {
-    height: 10px;
-    width: 20px;
-    background: #087f76;
-    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    width: 25px;
+    height: 11px;
+    background: #e6a63c;
+    border-radius: 5px 5px 2px 2px;
 }
 
 .sports-body {
-    width: 43px;
+    position: absolute;
+    bottom: 0;
     height: 95px;
+    width: 52px;
+    border-radius: 12px 12px 15px 15px;
     background: linear-gradient(
-        90deg,
-        #e8d9ff,
+        110deg,
+        #f7e6a8,
         #ffffff,
-        #c9b8f4
+        #f1cf73
     );
-    border: 3px solid white;
-    border-radius: 10px 10px 14px 14px;
+    border: 2px solid #e3c36c;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #7152a7;
-    box-shadow: 0 8px 15px rgba(20, 100, 100, 0.12);
+    color: #a87817;
+    box-shadow: 0 7px 15px rgba(120, 90, 20, 0.12);
 }
 
 .sports-body span {
@@ -273,13 +310,14 @@ body {
 }
 
 .sports-body small {
-    font-size: 5px;
+    font-size: 6px;
+    letter-spacing: 0.3px;
 }
 
 .water-drop {
     position: absolute;
-    top: 20px;
-    right: 10px;
+    right: 12%;
+    top: 0;
     font-size: 23px;
     animation: float 3s ease-in-out infinite;
 }
@@ -290,76 +328,111 @@ body {
     }
 
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-9px);
     }
 }
 
 
-/* SECTION HEADINGS */
+/* QUICK TOPICS */
 
-.topics-section,
-.drinks-section,
-.assistant-section,
-.recovery-section {
-    padding: 22px;
+.topics-section {
+    padding: 25px 20px 5px;
 }
 
-.section-heading h2,
-.drinks-section h2,
-.recovery-section h2 {
-    font-size: 21px;
-    margin-top: 8px;
-    color: #183b43;
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 17px;
 }
 
-
-/* TOPIC GRID */
+.section-heading h2 {
+    font-size: 22px;
+    color: #173d45;
+}
 
 .topic-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-top: 18px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
 }
 
 .topic-card {
     background: white;
-    border: 1px solid #e7efec;
+    border: 1px solid #e2eeee;
     border-radius: 17px;
-    min-height: 125px;
-    padding: 15px;
+    padding: 18px 13px;
     text-align: left;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
-    gap: 7px;
-    color: #183b43;
-    cursor: pointer;
-    transition: 0.2s;
+    gap: 5px;
+    transition: 0.2s ease;
+    box-shadow: 0 4px 12px rgba(20, 80, 80, 0.04);
 }
 
 .topic-card:hover {
     transform: translateY(-3px);
-    border-color: #80cfc1;
+    border-color: #83cfc4;
+    box-shadow: 0 7px 18px rgba(20, 100, 90, 0.10);
 }
 
 .topic-icon {
     font-size: 25px;
+    margin-bottom: 5px;
 }
 
 .topic-card strong {
-    font-size: 13px;
+    font-size: 14px;
+    color: #17444a;
 }
 
 .topic-card small {
-    font-size: 10px;
-    color: #809594;
+    font-size: 11px;
+    color: #789095;
 }
 
 
-/* DRINK INFORMATION */
+/* DRINK INFORMATION / HYDRATION SECTION */
+
+.drinks-section {
+    margin: 15px 17px 25px;
+}
+
+.hydration-background {
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.48),
+            rgba(0, 0, 0, 0.72)
+        ),
+        url("juice.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    border-radius: 22px;
+    padding: 25px 20px;
+    overflow: hidden;
+}
+
+.hydration-background h2,
+.hydration-background h3,
+.hydration-background p {
+    color: white;
+}
+
+.hydration-background h2 {
+    font-size: 22px;
+    margin-bottom: 17px;
+}
+
+.hydration-background .eyebrow {
+    color: #ffb15c;
+}
 
 .drink-cards {
-    margin-top: 17px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -368,118 +441,115 @@ body {
 .drink-info {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 14px;
     padding: 15px;
-    background: white;
-    border: 1px solid #e7efec;
     border-radius: 16px;
 }
 
+.hydration-background .drink-info {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(8px);
+}
+
 .drink-emoji {
-    width: 54px;
-    height: 54px;
-    border-radius: 14px;
-    display: grid;
-    place-items: center;
-    font-size: 29px;
-    flex-shrink: 0;
-}
-
-.water-info .drink-emoji {
-    background: #e0f5fa;
-}
-
-.electrolyte-info .drink-emoji {
-    background: #eee7ff;
-}
-
-.juice-info .drink-emoji {
-    background: #fff0d9;
+    font-size: 27px;
+    min-width: 38px;
+    text-align: center;
 }
 
 .drink-info h3 {
     font-size: 14px;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
 .drink-info p {
-    color: #718785;
     font-size: 11px;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 
 /* CHAT ASSISTANT */
 
 .assistant-section {
-    margin: 12px 15px;
-    padding: 20px 15px;
-    background: #eaf6f3;
+    margin: 20px 17px;
+    padding: 20px;
+    background: #ffffff;
+    color: #172b35;
     border-radius: 22px;
+    border: 1px solid #e5eeee;
+    box-shadow: 0 5px 18px rgba(30, 80, 80, 0.05);
+}
+
+.assistant-section h2,
+.assistant-section p {
+    color: #172b35;
 }
 
 .assistant-heading {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 18px;
+    gap: 13px;
+    margin-bottom: 20px;
 }
 
 .assistant-avatar {
-    width: 43px;
-    height: 43px;
-    border-radius: 14px;
-    background: #087f76;
-    color: white;
-    display: grid;
-    place-items: center;
+    width: 45px;
+    height: 45px;
+    background: #d9f4ee;
+    color: #087f75;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 24px;
 }
 
 .assistant-heading h2 {
-    font-size: 19px;
-    margin: 4px 0;
+    font-size: 21px;
+    color: #173d45;
+    line-height: 1.3;
 }
 
 .assistant-heading p {
-    font-size: 10px;
-    color: #78918f;
+    font-size: 11px;
+    color: #809497;
 }
 
-
-/* CHAT WINDOW */
-
 .chat-box {
-    min-height: 230px;
-    max-height: 350px;
+    height: 250px;
     overflow-y: auto;
-    background: white;
-    border-radius: 16px;
-    padding: 14px;
-    margin-bottom: 12px;
+    background: #f2f9f8;
+    border: 1px solid #e0eeee;
+    border-radius: 15px;
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 14px;
 }
 
 .message {
-    max-width: 88%;
-    padding: 12px 14px;
-    margin-bottom: 12px;
-    border-radius: 14px;
+    max-width: 90%;
+    padding: 11px 13px;
+    border-radius: 13px;
     font-size: 12px;
-    line-height: 1.7;
+    line-height: 1.6;
     white-space: pre-wrap;
 }
 
 .bot-message {
-    background: #e5f4ef;
-    color: #244e4b;
-    border-radius: 4px 14px 14px 14px;
+    align-self: flex-start;
+    background: #e1f3ef;
+    color: #21484a;
+    border-bottom-left-radius: 4px;
 }
 
 .user-message {
-    background: #087f76;
+    align-self: flex-end;
+    background: #087f75;
     color: white;
-    margin-left: auto;
-    border-radius: 14px 4px 14px 14px;
+    border-bottom-right-radius: 4px;
 }
 
 
@@ -487,95 +557,121 @@ body {
 
 .input-area {
     display: flex;
+    align-items: center;
     gap: 9px;
-    background: white;
-    padding: 7px;
-    border-radius: 13px;
-    border: 1px solid #dcebe6;
 }
 
 .input-area input {
     flex: 1;
     min-width: 0;
-    border: none;
+    border: 1px solid #dce9e9;
+    background: #f8fbfb;
+    padding: 13px 14px;
+    border-radius: 13px;
     outline: none;
-    padding: 10px;
-    font-size: 12px;
-    background: transparent;
+    font-size: 13px;
+    color: #173d45;
 }
 
-#send-button {
-    width: 42px;
-    height: 42px;
-    border-radius: 11px;
-    background: #087f76;
+.input-area input:focus {
+    border-color: #0b9688;
+    box-shadow: 0 0 0 3px rgba(11, 150, 136, 0.10);
+}
+
+.input-area button {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 13px;
+    background: #087f75;
     color: white;
     font-size: 23px;
     cursor: pointer;
+    transition: 0.2s ease;
 }
 
-#send-button:hover {
-    background: #075e58;
+.input-area button:hover {
+    background: #05675f;
 }
 
 .input-hint {
-    color: #819694;
     font-size: 10px;
-    margin: 10px 3px;
+    color: #899b9e;
+    margin-top: 9px;
 }
+
+
+/* QUICK CHAT QUESTIONS */
 
 .quick-questions {
     display: flex;
     flex-wrap: wrap;
-    gap: 7px;
-    margin-top: 12px;
+    gap: 8px;
+    margin-top: 15px;
 }
 
 .example-button {
-    border: 1px solid #c8e4dc;
-    background: white;
-    color: #087f76;
+    border: 1px solid #cce8e3;
+    background: #f1faf8;
+    color: #087f75;
     border-radius: 20px;
-    padding: 9px 12px;
+    padding: 8px 12px;
     font-size: 10px;
     cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.example-button:hover {
+    background: #d9f2ed;
 }
 
 
-/* RECOVERY TIPS */
+/* RECOVERY REMINDERS */
+
+.recovery-section {
+    padding: 22px 20px;
+}
+
+.recovery-section h2 {
+    font-size: 22px;
+    color: #173d45;
+    margin-bottom: 16px;
+}
 
 .recovery-section details {
     background: white;
-    border: 1px solid #e7efec;
+    border: 1px solid #e3eeee;
     border-radius: 13px;
-    padding: 15px;
-    margin-top: 11px;
+    padding: 14px;
+    margin-bottom: 10px;
 }
 
 .recovery-section summary {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
+    color: #24545a;
     cursor: pointer;
 }
 
 .recovery-section details p {
-    color: #718785;
-    font-size: 11px;
-    line-height: 1.7;
-    margin-top: 12px;
+    font-size: 12px;
+    color: #627c81;
+    line-height: 1.6;
+    padding-top: 10px;
 }
 
 
-/* SAFETY */
+/* SAFETY NOTICE */
 
 .safety-notice {
     display: flex;
     gap: 12px;
-    margin: 15px;
-    padding: 17px;
-    background: #fff2e5;
-    border-radius: 14px;
-    color: #94501d;
+    align-items: flex-start;
+    margin: 15px 18px 25px;
+    padding: 16px;
+    background: #fff7e9;
+    border: 1px solid #f4dfb9;
+    border-radius: 15px;
 }
 
 .safety-notice > span {
@@ -583,13 +679,15 @@ body {
 }
 
 .safety-notice strong {
+    color: #855a18;
     font-size: 12px;
 }
 
 .safety-notice p {
-    font-size: 10px;
-    line-height: 1.7;
-    margin-top: 7px;
+    font-size: 11px;
+    color: #826c4d;
+    line-height: 1.5;
+    margin-top: 4px;
 }
 
 
@@ -598,33 +696,33 @@ body {
 .bottom-nav {
     position: fixed;
     bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     max-width: 480px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.97);
+    border-top: 1px solid #e5eeee;
     display: flex;
     justify-content: space-around;
-    background: rgba(255, 255, 255, 0.96);
-    border-top: 1px solid #e7efec;
-    padding: 12px 8px;
-    z-index: 10;
+    align-items: center;
+    z-index: 100;
     backdrop-filter: blur(10px);
 }
 
 .bottom-nav a {
+    text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
-    text-decoration: none;
-    color: #79918e;
-    min-width: 70px;
+    gap: 2px;
+    color: #81999b;
+    font-size: 20px;
+    transition: 0.2s ease;
 }
 
 .bottom-nav a:hover {
-    color: #087f76;
-}
-
-.bottom-nav span {
-    font-size: 21px;
+    color: #087f75;
 }
 
 .bottom-nav small {
@@ -636,64 +734,59 @@ body {
 
 footer {
     text-align: center;
-    padding: 18px;
-    color: #91a5a1;
+    padding: 15px 10px 20px;
     font-size: 9px;
     letter-spacing: 1px;
+    color: #91a5a6;
 }
 
 
-/* DESKTOP DISPLAY */
+/* DESKTOP RESPONSIVENESS */
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
+
+    body {
+        padding: 25px 0;
+    }
 
     .app-container {
-        margin: 25px auto;
         border-radius: 25px;
-        overflow: hidden;
-        min-height: calc(100vh - 50px);
+        box-shadow: 0 10px 45px rgba(30, 80, 80, 0.12);
     }
 
     .bottom-nav {
-        position: fixed;
-        bottom: 25px;
-        width: 480px;
-        border-radius: 0 0 25px 25px;
+        bottom: 0;
+    }
+
+    .hero-section {
+        border-radius: 0 0 28px 28px;
     }
 
 }
 
-/* Hydration section background */
 
-.hydration-section {
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.35),
-            rgba(0, 0, 0, 0.55)
-        ),
-        url("juice.jpeg");
+/* SMALL PHONE RESPONSIVENESS */
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+@media (max-width: 360px) {
 
-    color: white;
-    border-radius: 22px;
-    padding: 22px;
-}
+    .hero-content h2 {
+        font-size: 29px;
+    }
 
-/* Keep hydration text readable */
+    .topic-grid {
+        gap: 9px;
+    }
 
-.hydration-section h2,
-.hydration-section p {
-    color: white;
-}
+    .topic-card {
+        padding: 14px 10px;
+    }
 
-/* Hydration cards */
+    .assistant-section {
+        padding: 15px;
+    }
 
-.hydration-section .drink-card {
-    background: rgba(0, 0, 0, 0.65);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
+    .hydration-background {
+        padding: 20px 15px;
+    }
+
 }
