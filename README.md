@@ -1,3 +1,4 @@
+Click to view  https://j3n3codes.github.io/Heat-Stress-Assitant/
 # Heat Stress Assistant
 
 An evidence-informed chatbot prototype designed to provide general guidance on exercise, hydration, nutrition, cooling strategies, and recovery following heat stress.
