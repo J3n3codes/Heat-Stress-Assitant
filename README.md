@@ -52,16 +52,16 @@ Heat-Stress-Assistant/
  index.html
  style.css
  script.js
-│
+\
 data/
-│   ─ training_examples.csv
-│   ─ response_templates.json
+\   ─ training_examples.csv
+\   ─ response_templates.json
  docs/
-│   ─ Model Approach.md
-│   ─ Version Comparison.md
-│   ─ lit_review/
-│
+\   ─ Model Approach.md
+\   ─ Version Comparison.md
+\   ─ lit_review/
+
 chatbot/
-─ app.py
+\- app.py
  app_version2.py
-─ app_version3.py# Heat-Stress-Assitant
+\- app_version3.py# Heat-Stress-Assitant
