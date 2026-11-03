@@ -1,266 +1,664 @@
-
-/* General Page Styling */
+/* HEATWISE MOBILE APP DESIGN */
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
-    background: #f1f5f9;
-    color: #1e293b;
+    background: #e9f3f2;
+    color: #183b43;
 }
 
 
-/* Header */
+/* APP CONTAINER */
 
-header {
-    background: #123047;
+.app-container {
+    max-width: 480px;
+    min-height: 100vh;
+    margin: auto;
+    background: #f8fbfa;
+    position: relative;
+    padding-bottom: 85px;
+    box-shadow: 0 0 35px rgba(20, 60, 60, 0.08);
+}
+
+
+/* HEADER */
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 22px;
+    background: #ffffff;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.brand-icon {
+    background: #d8f4ed;
+    color: #078b78;
+    width: 40px;
+    height: 40px;
+    border-radius: 13px;
+    display: grid;
+    place-items: center;
+    font-size: 23px;
+}
+
+.brand h1 {
+    font-size: 20px;
+    letter-spacing: -0.5px;
+}
+
+.brand p {
+    font-size: 9px;
+    color: #78918f;
+    letter-spacing: 1.3px;
+    margin-top: 4px;
+}
+
+.status-icon {
+    font-size: 11px;
+    color: #078b78;
+    background: #e4f6ee;
+    padding: 8px 11px;
+    border-radius: 20px;
+}
+
+
+/* HERO */
+
+.hero-section {
+    margin: 15px;
+    min-height: 290px;
+    border-radius: 25px;
+    padding: 28px 20px;
+    background: linear-gradient(
+        135deg,
+        #d6f5ee,
+        #a6e5df
+    );
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 65%;
+}
+
+.eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    color: #168b7b;
+}
+
+.hero-content h2 {
+    font-size: 31px;
+    line-height: 1.15;
+    margin: 14px 0;
+    color: #16464b;
+}
+
+.hero-content p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #426c6d;
+    margin-bottom: 20px;
+}
+
+.primary-button {
+    display: inline-block;
+    background: #087f76;
     color: white;
-    text-align: center;
-    padding: 35px 20px;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: bold;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 32px;
-}
-
-header p {
-    margin-top: 12px;
-    color: #dbeafe;
-    font-size: 15px;
+.primary-button:hover {
+    background: #075e58;
 }
 
 
-/* Main Content */
+/* DRINK ILLUSTRATIONS */
 
-main {
-    max-width: 850px;
-    margin: 35px auto;
-    padding: 0 20px;
+.drink-display {
+    position: absolute;
+    right: 4px;
+    bottom: 15px;
+    width: 43%;
+    height: 220px;
 }
 
-section {
-    margin-bottom: 25px;
+.drink {
+    position: absolute;
+    bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.intro {
-    text-align: center;
+.bottle {
+    left: 10px;
+    z-index: 2;
 }
 
-.intro h2 {
-    color: #123047;
+.bottle-cap {
+    height: 12px;
+    width: 24px;
+    background: #ffffff;
+    border-radius: 5px 5px 2px 2px;
+}
+
+.bottle-neck {
+    width: 23px;
+    height: 15px;
+    background: #c8f1e9;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+}
+
+.bottle-body {
+    width: 62px;
+    height: 120px;
+    background: linear-gradient(
+        90deg,
+        #b9ece7,
+        #ffffff,
+        #8ddad5
+    );
+    border: 3px solid white;
+    border-radius: 15px 15px 19px 19px;
+    box-shadow: 0 10px 20px rgba(20, 100, 100, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #087f76;
+}
+
+.bottle-body span {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.bottle-body small {
+    font-size: 6px;
+    margin-top: 4px;
+}
+
+.juice {
+    left: 78px;
+    bottom: 24px;
+    z-index: 3;
+}
+
+.juice-glass {
+    width: 54px;
+    height: 85px;
+    background: rgba(255, 255, 255, 0.65);
+    border: 3px solid white;
+    border-radius: 5px 5px 14px 14px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(20, 100, 100, 0.12);
+}
+
+.juice-liquid {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 72%;
+    background: linear-gradient(
+        #ffcf65,
+        #f49b32
+    );
+}
+
+.juice-glass span {
+    position: absolute;
+    top: 28px;
+    left: 13px;
+    font-size: 20px;
+}
+
+.sports {
+    right: 0;
+    bottom: 15px;
+}
+
+.sports-cap {
+    height: 10px;
+    width: 20px;
+    background: #087f76;
+    border-radius: 4px;
+}
+
+.sports-body {
+    width: 43px;
+    height: 95px;
+    background: linear-gradient(
+        90deg,
+        #e8d9ff,
+        #ffffff,
+        #c9b8f4
+    );
+    border: 3px solid white;
+    border-radius: 10px 10px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #7152a7;
+    box-shadow: 0 8px 15px rgba(20, 100, 100, 0.12);
+}
+
+.sports-body span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.sports-body small {
+    font-size: 5px;
+}
+
+.water-drop {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    font-size: 23px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* SECTION HEADINGS */
+
+.topics-section,
+.drinks-section,
+.assistant-section,
+.recovery-section {
+    padding: 22px;
+}
+
+.section-heading h2,
+.drinks-section h2,
+.recovery-section h2 {
+    font-size: 21px;
+    margin-top: 8px;
+    color: #183b43;
+}
+
+
+/* TOPIC GRID */
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.topic-card {
+    background: white;
+    border: 1px solid #e7efec;
+    border-radius: 17px;
+    min-height: 125px;
+    padding: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: #183b43;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.topic-card:hover {
+    transform: translateY(-3px);
+    border-color: #80cfc1;
+}
+
+.topic-icon {
     font-size: 25px;
 }
 
-.intro p {
-    color: #64748b;
+.topic-card strong {
+    font-size: 13px;
+}
+
+.topic-card small {
+    font-size: 10px;
+    color: #809594;
+}
+
+
+/* DRINK INFORMATION */
+
+.drink-cards {
+    margin-top: 17px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.drink-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: white;
+    border: 1px solid #e7efec;
+    border-radius: 16px;
+}
+
+.drink-emoji {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-size: 29px;
+    flex-shrink: 0;
+}
+
+.water-info .drink-emoji {
+    background: #e0f5fa;
+}
+
+.electrolyte-info .drink-emoji {
+    background: #eee7ff;
+}
+
+.juice-info .drink-emoji {
+    background: #fff0d9;
+}
+
+.drink-info h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.drink-info p {
+    color: #718785;
+    font-size: 11px;
     line-height: 1.6;
 }
 
 
-/* Chat Container */
+/* CHAT ASSISTANT */
 
-.chat-container {
-    background: white;
-    padding: 22px;
-    border-radius: 12px;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+.assistant-section {
+    margin: 12px 15px;
+    padding: 20px 15px;
+    background: #eaf6f3;
+    border-radius: 22px;
 }
 
-.chat-box {
-    min-height: 260px;
-    max-height: 420px;
-    overflow-y: auto;
-    padding: 15px;
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 9px;
+.assistant-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     margin-bottom: 18px;
 }
 
+.assistant-avatar {
+    width: 43px;
+    height: 43px;
+    border-radius: 14px;
+    background: #087f76;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+}
 
-/* Chat Messages */
+.assistant-heading h2 {
+    font-size: 19px;
+    margin: 4px 0;
+}
+
+.assistant-heading p {
+    font-size: 10px;
+    color: #78918f;
+}
+
+
+/* CHAT WINDOW */
+
+.chat-box {
+    min-height: 230px;
+    max-height: 350px;
+    overflow-y: auto;
+    background: white;
+    border-radius: 16px;
+    padding: 14px;
+    margin-bottom: 12px;
+}
 
 .message {
-    max-width: 85%;
-    padding: 13px 16px;
-    margin-bottom: 13px;
-    border-radius: 10px;
-    line-height: 1.6;
-    font-size: 14px;
+    max-width: 88%;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    border-radius: 14px;
+    font-size: 12px;
+    line-height: 1.7;
     white-space: pre-wrap;
 }
 
 .bot-message {
-    background: #e0f2fe;
-    color: #123047;
-    margin-right: auto;
+    background: #e5f4ef;
+    color: #244e4b;
+    border-radius: 4px 14px 14px 14px;
 }
 
 .user-message {
-    background: #123047;
+    background: #087f76;
     color: white;
     margin-left: auto;
+    border-radius: 14px 4px 14px 14px;
 }
 
 
-/* Input Area */
+/* CHAT INPUT */
 
 .input-area {
     display: flex;
-    gap: 10px;
+    gap: 9px;
+    background: white;
+    padding: 7px;
+    border-radius: 13px;
+    border: 1px solid #dcebe6;
 }
 
-input {
+.input-area input {
     flex: 1;
     min-width: 0;
-    padding: 14px;
-    border: 1px solid #cbd5e1;
-    border-radius: 7px;
-    font-size: 15px;
-    outline: none;
-}
-
-input:focus {
-    border-color: #0284c7;
-}
-
-
-/* Buttons */
-
-button {
-    cursor: pointer;
     border: none;
-    border-radius: 7px;
-    font-size: 14px;
-    transition: 0.2s;
+    outline: none;
+    padding: 10px;
+    font-size: 12px;
+    background: transparent;
 }
 
 #send-button {
-    background: #087e8b;
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+    background: #087f76;
     color: white;
-    padding: 0 25px;
-    font-weight: bold;
+    font-size: 23px;
+    cursor: pointer;
 }
 
 #send-button:hover {
-    background: #066570;
+    background: #075e58;
 }
 
-.example-buttons {
+.input-hint {
+    color: #819694;
+    font-size: 10px;
+    margin: 10px 3px;
+}
+
+.quick-questions {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 7px;
+    margin-top: 12px;
 }
 
 .example-button {
-    background: #e0f2fe;
-    color: #075985;
-    padding: 10px 15px;
-}
-
-.example-button:hover {
-    background: #bae6fd;
-}
-
-button:focus-visible,
-input:focus-visible {
-    outline: 3px solid #38bdf8;
-    outline-offset: 2px;
-}
-
-
-/* Input Hint */
-
-.input-hint {
-    font-size: 12px;
-    color: #64748b;
-    line-height: 1.5;
-    margin-bottom: 0;
-}
-
-
-/* About Section */
-
-.about {
+    border: 1px solid #c8e4dc;
     background: white;
-    padding: 22px;
-    border-radius: 10px;
-    border-left: 4px solid #087e8b;
+    color: #087f76;
+    border-radius: 20px;
+    padding: 9px 12px;
+    font-size: 10px;
+    cursor: pointer;
 }
 
-.about h3 {
-    color: #123047;
+
+/* RECOVERY TIPS */
+
+.recovery-section details {
+    background: white;
+    border: 1px solid #e7efec;
+    border-radius: 13px;
+    padding: 15px;
+    margin-top: 11px;
 }
 
-.about p {
-    color: #475569;
+.recovery-section summary {
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.recovery-section details p {
+    color: #718785;
+    font-size: 11px;
     line-height: 1.7;
+    margin-top: 12px;
 }
 
 
-/* Safety Notice */
+/* SAFETY */
 
-.disclaimer {
-    background: #fff7ed;
-    border-left: 4px solid #ea580c;
-    padding: 20px;
-    border-radius: 8px;
+.safety-notice {
+    display: flex;
+    gap: 12px;
+    margin: 15px;
+    padding: 17px;
+    background: #fff2e5;
+    border-radius: 14px;
+    color: #94501d;
 }
 
-.disclaimer h3 {
-    color: #9a3412;
+.safety-notice > span {
+    font-size: 23px;
 }
 
-.disclaimer p {
-    color: #7c2d12;
+.safety-notice strong {
+    font-size: 12px;
+}
+
+.safety-notice p {
+    font-size: 10px;
     line-height: 1.7;
-    font-size: 14px;
+    margin-top: 7px;
 }
 
 
-/* Footer */
+/* BOTTOM NAVIGATION */
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.96);
+    border-top: 1px solid #e7efec;
+    padding: 12px 8px;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.bottom-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: #79918e;
+    min-width: 70px;
+}
+
+.bottom-nav a:hover {
+    color: #087f76;
+}
+
+.bottom-nav span {
+    font-size: 21px;
+}
+
+.bottom-nav small {
+    font-size: 10px;
+}
+
+
+/* FOOTER */
 
 footer {
-    background: #123047;
-    color: #dbeafe;
     text-align: center;
-    padding: 20px;
-    font-size: 13px;
+    padding: 18px;
+    color: #91a5a1;
+    font-size: 9px;
+    letter-spacing: 1px;
 }
 
 
-/* Mobile Responsive Design */
+/* DESKTOP DISPLAY */
 
-@media (max-width: 600px) {
+@media (min-width: 700px) {
 
-    header h1 {
-        font-size: 25px;
+    .app-container {
+        margin: 25px auto;
+        border-radius: 25px;
+        overflow: hidden;
+        min-height: calc(100vh - 50px);
     }
 
-    main {
-        margin: 20px auto;
-        padding: 0 12px;
-    }
-
-    .chat-container {
-        padding: 14px;
-    }
-
-    .input-area {
-        flex-direction: column;
-    }
-
-    #send-button {
-        padding: 13px;
-    }
-
-    .message {
-        max-width: 95%;
+    .bottom-nav {
+        position: fixed;
+        bottom: 25px;
+        width: 480px;
+        border-radius: 0 0 25px 25px;
     }
 
 }
