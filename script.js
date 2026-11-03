@@ -367,10 +367,11 @@ userInput.addEventListener("keydown", function(event) {
 
 });
 
-
 // Example question buttons
 
-const exampleButtons = document.querySelectorAll(".example-button");
+const exampleButtons = document.querySelectorAll(
+    ".example-button, .topic-card"
+);
 
 exampleButtons.forEach(button => {
 
@@ -381,6 +382,10 @@ exampleButtons.forEach(button => {
         userInput.value = question;
 
         sendMessage();
+
+        document.getElementById("assistant").scrollIntoView({
+            behavior: "smooth"
+        });
 
     });
 
