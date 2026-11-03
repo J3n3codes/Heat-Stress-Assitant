@@ -1,1 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Heat Stress Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Heat Stress Assistant</h1>
+
+        <p>
+            An evidence-informed chatbot for general heat stress
+            recovery guidance.
+        </p>
+    </header>
+
+
+    <main>
+
+        <section class="intro">
+
+            <h2>How can I help you?</h2>
+
+            <p>
+                Ask a question about exercise, hydration, nutrition,
+                cooling strategies, or recovery after heat exposure.
+            </p>
+
+        </section>
+
+
+        <section class="chat-container">
+
+            <div id="chat-box" class="chat-box">
+
+                <div class="message bot-message">
+                    Hello! Welcome to the Heat Stress Assistant.
+                    Enter a question or keyword to get started.
+                </div>
+
+            </div>
+
+
+            <div class="input-area">
+
+                <input
+                    type="text"
+                    id="user-input"
+                    placeholder="Enter your question or keyword..."
+                    autocomplete="off"
+                >
+
+                <button id="send-button">
+                    Ask
+                </button>
+
+            </div>
+
+
+            <p class="input-hint">
+                You can enter a complete question or a keyword such as
+                hydration, electrolytes, jogging, cooling, or dizziness.
+            </p>
+
+        </section>
+
+
+        <section class="examples">
+
+            <h3>Try asking about:</h3>
+
+            <div class="example-buttons">
+
+                <button class="example-button"
+                    data-question="How much water should I drink?">
+                    Hydration
+                </button>
+
+                <button class="example-button"
+                    data-question="Can I start jogging again?">
+                    Exercise
+                </button>
+
+                <button class="example-button"
+                    data-question="What should I eat after exercise?">
+                    Nutrition
+                </button>
+
+                <button class="example-button"
+                    data-question="How can I cool down?">
+                    Cooling
+                </button>
+
+                <button class="example-button"
+                    data-question="I feel dizzy after exercise">
+                    Warning Symptoms
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="about">
+
+            <h3>About this project</h3>
+
+            <p>
+                The Heat Stress Assistant is a retrieval-based chatbot
+                prototype. It matches user questions with predefined
+                training examples and retrieves an associated response
+                from a response template database.
+            </p>
+
+            <p>
+                The project explores lightweight question matching
+                and evidence-informed information retrieval.
+            </p>
+
+        </section>
+
+
+        <section class="disclaimer">
+
+            <h3>Important Safety Notice</h3>
+
+            <p>
+                This chatbot is an educational prototype and does not
+                provide medical diagnosis or individualized treatment.
+                Confusion, fainting, collapse, seizures, or altered
+                consciousness may indicate a medical emergency.
+                Stop activity and seek urgent medical help immediately.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Heat Stress Assistant | Educational Research Prototype
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
