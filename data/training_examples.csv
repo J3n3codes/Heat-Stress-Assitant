@@ -1,1 +1,19 @@
-
+question,category
+hey,Greeting
+good afternoon,Greeting
+good evening,Greeting
+can i start jogging again,Exercise Guidance
+when can i return to training,Exercise Guidance
+can i exercise after heat stress,Exercise Guidance
+how much water should i drink,Hydration Guidance
+how do i rehydrate after exercise,Hydration Guidance
+should i drink electrolytes,Hydration Guidance
+what should i eat after exercise,Diet and Recovery Nutrition
+what foods help recovery,Diet and Recovery Nutrition
+do i need carbohydrates,Diet and Recovery Nutrition
+how can i cool down,Cooling Strategies
+should i use cold water,Cooling Strategies
+what cooling methods work,Cooling Strategies
+i feel dizzy after exercise,Warning Symptoms
+i fainted during training,Warning Symptoms
+i feel confused after heat exposure,Warning Symptoms
