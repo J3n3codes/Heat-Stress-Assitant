@@ -12,145 +12,391 @@
 
 <body>
 
-    <header>
-        <h1>Heat Stress Assistant</h1>
+    <div class="app-container">
 
-        <p>
-            An evidence-informed chatbot for general heat stress
-            recovery guidance.
-        </p>
-    </header>
+        <!-- App Header -->
 
+        <header class="app-header">
 
-    <main>
+            <div class="brand">
+                <div class="brand-icon">✦</div>
 
-        <section class="intro">
+                <div>
+                    <h1>HeatWise</h1>
+                    <p>HEAT STRESS ASSISTANT</p>
+                </div>
+            </div>
 
-            <h2>How can I help you?</h2>
+            <div class="status-icon">● Online</div>
 
-            <p>
-                Ask a question about exercise, hydration, nutrition,
-                cooling strategies, or recovery after heat exposure.
-            </p>
-
-        </section>
+        </header>
 
 
-        <section class="chat-container">
+        <main>
 
-            <div id="chat-box" class="chat-box">
+            <!-- Home Section -->
 
-                <div class="message bot-message">
-                    Hello! Welcome to the Heat Stress Assistant.
-                    Enter a question or keyword to get started.
+            <section id="home" class="hero-section">
+
+                <div class="hero-content">
+
+                    <span class="eyebrow">YOUR RECOVERY COMPANION</span>
+
+                    <h2>
+                        Beat the heat.<br>
+                        Feel better.
+                    </h2>
+
+                    <p>
+                        Explore hydration, cooling, nutrition
+                        and exercise recovery guidance.
+                    </p>
+
+                    <a href="#assistant" class="primary-button">
+                        Ask the assistant →
+                    </a>
+
                 </div>
 
-            </div>
+
+                <!-- Drink Illustrations -->
+
+                <div class="drink-display">
+
+                    <div class="drink bottle">
+
+                        <div class="bottle-cap"></div>
+
+                        <div class="bottle-neck"></div>
+
+                        <div class="bottle-body">
+                            <span>H₂O</span>
+                            <small>PURE WATER</small>
+                        </div>
+
+                    </div>
 
 
-            <div class="input-area">
+                    <div class="drink juice">
 
-                <input
-                    type="text"
-                    id="user-input"
-                    placeholder="Enter your question or keyword..."
-                    autocomplete="off"
-                >
+                        <div class="juice-glass">
+                            <div class="juice-liquid"></div>
+                            <span>🍊</span>
+                        </div>
 
-                <button id="send-button">
-                    Ask
-                </button>
-
-            </div>
+                    </div>
 
 
-            <p class="input-hint">
-                You can enter a complete question or a keyword such as
-                hydration, electrolytes, jogging, cooling, or dizziness.
-            </p>
+                    <div class="drink sports">
 
-        </section>
+                        <div class="sports-cap"></div>
 
+                        <div class="sports-body">
+                            <span>+</span>
+                            <small>ELECTROLYTES</small>
+                        </div>
 
-        <section class="examples">
+                    </div>
 
-            <h3>Try asking about:</h3>
+                    <div class="water-drop">💧</div>
 
-            <div class="example-buttons">
+                </div>
 
-                <button class="example-button"
-                    data-question="How much water should I drink?">
-                    Hydration
-                </button>
-
-                <button class="example-button"
-                    data-question="Can I start jogging again?">
-                    Exercise
-                </button>
-
-                <button class="example-button"
-                    data-question="What should I eat after exercise?">
-                    Nutrition
-                </button>
-
-                <button class="example-button"
-                    data-question="How can I cool down?">
-                    Cooling
-                </button>
-
-                <button class="example-button"
-                    data-question="I feel dizzy after exercise">
-                    Warning Symptoms
-                </button>
-
-            </div>
-
-        </section>
+            </section>
 
 
-        <section class="about">
+            <!-- Quick Topics -->
 
-            <h3>About this project</h3>
+            <section class="topics-section">
 
-            <p>
-                The Heat Stress Assistant is a retrieval-based chatbot
-                prototype. It matches user questions with predefined
-                training examples and retrieves an associated response
-                from a response template database.
-            </p>
-
-            <p>
-                The project explores lightweight question matching
-                and evidence-informed information retrieval.
-            </p>
-
-        </section>
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">EXPLORE</span>
+                        <h2>What do you need?</h2>
+                    </div>
+                </div>
 
 
-        <section class="disclaimer">
+                <div class="topic-grid">
 
-            <h3>Important Safety Notice</h3>
+                    <button class="topic-card"
+                        data-question="How much water should I drink?">
 
-            <p>
-                This chatbot is an educational prototype and does not
-                provide medical diagnosis or individualized treatment.
-                Confusion, fainting, collapse, seizures, or altered
-                consciousness may indicate a medical emergency.
-                Stop activity and seek urgent medical help immediately.
-            </p>
+                        <span class="topic-icon">💧</span>
+                        <strong>Hydration</strong>
+                        <small>Fluids & electrolytes</small>
 
-        </section>
-
-    </main>
+                    </button>
 
 
-    <footer>
+                    <button class="topic-card"
+                        data-question="Can I start jogging again?">
 
-        <p>
-            Heat Stress Assistant | Educational Research Prototype
-        </p>
+                        <span class="topic-icon">🏃</span>
+                        <strong>Exercise</strong>
+                        <small>Returning to activity</small>
 
-    </footer>
+                    </button>
+
+
+                    <button class="topic-card"
+                        data-question="What should I eat after exercise?">
+
+                        <span class="topic-icon">🥗</span>
+                        <strong>Nutrition</strong>
+                        <small>Food & recovery</small>
+
+                    </button>
+
+
+                    <button class="topic-card"
+                        data-question="How can I cool down?">
+
+                        <span class="topic-icon">🧊</span>
+                        <strong>Cooling</strong>
+                        <small>Cooling strategies</small>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- Drink Information -->
+
+            <section class="drinks-section">
+
+                <span class="eyebrow">RECOVERY BASICS</span>
+
+                <h2>What goes into recovery?</h2>
+
+                <div class="drink-cards">
+
+                    <article class="drink-info water-info">
+
+                        <div class="drink-emoji">💧</div>
+
+                        <div>
+                            <h3>Water</h3>
+                            <p>
+                                Supports fluid replacement after
+                                sweating and heat exposure.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="drink-info electrolyte-info">
+
+                        <div class="drink-emoji">🥤</div>
+
+                        <div>
+                            <h3>Electrolytes</h3>
+                            <p>
+                                Can help replace sodium and other
+                                electrolytes lost through sweat.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="drink-info juice-info">
+
+                        <div class="drink-emoji">🧃</div>
+
+                        <div>
+                            <h3>Nutrition & fluids</h3>
+                            <p>
+                                Drinks and balanced meals can
+                                contribute to recovery nutrition.
+                            </p>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- Chat Assistant -->
+
+            <section id="assistant" class="assistant-section">
+
+                <div class="assistant-heading">
+
+                    <div class="assistant-avatar">✦</div>
+
+                    <div>
+                        <span class="eyebrow">YOUR AI-STYLE GUIDE</span>
+                        <h2>Ask HeatWise</h2>
+                        <p>Retrieval-based research assistant</p>
+                    </div>
+
+                </div>
+
+
+                <div id="chat-box" class="chat-box">
+
+                    <div class="message bot-message">
+
+                        Hello! Welcome to HeatWise.
+
+                        Ask me about hydration, exercise,
+                        nutrition, cooling or heat stress recovery.
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-area">
+
+                    <input
+                        type="text"
+                        id="user-input"
+                        placeholder="Ask a question..."
+                        autocomplete="off"
+                    >
+
+                    <button id="send-button">
+                        ↑
+                    </button>
+
+                </div>
+
+
+                <p class="input-hint">
+                    Enter a question or keyword to get started.
+                </p>
+
+
+                <div class="quick-questions">
+
+                    <button class="example-button"
+                        data-question="Should I drink electrolytes?">
+                        Electrolytes
+                    </button>
+
+                    <button class="example-button"
+                        data-question="What foods help recovery?">
+                        Recovery food
+                    </button>
+
+                    <button class="example-button"
+                        data-question="I feel dizzy after exercise">
+                        Dizziness
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- Recovery Tips -->
+
+            <section id="recovery" class="recovery-section">
+
+                <span class="eyebrow">LEARN & RECOVER</span>
+
+                <h2>Recovery reminders</h2>
+
+                <details>
+                    <summary>💧 Restoring hydration</summary>
+
+                    <p>
+                        Replace fluids lost through sweating.
+                        Electrolytes may be useful when sweat losses
+                        are substantial.
+                    </p>
+                </details>
+
+
+                <details>
+                    <summary>🌡️ Cooling after heat exposure</summary>
+
+                    <p>
+                        Rest in a cool environment and consider
+                        appropriate cooling strategies.
+                    </p>
+                </details>
+
+
+                <details>
+                    <summary>🥗 Nutrition and recovery</summary>
+
+                    <p>
+                        Balanced meals, carbohydrates, fluids and
+                        adequate nutrition support recovery.
+                    </p>
+                </details>
+
+
+                <details>
+                    <summary>⚠️ Warning symptoms</summary>
+
+                    <p>
+                        Confusion, fainting, collapse, seizures or
+                        altered consciousness may indicate a medical
+                        emergency. Stop activity and seek urgent
+                        medical help immediately.
+                    </p>
+                </details>
+
+            </section>
+
+
+            <!-- Safety Notice -->
+
+            <section class="safety-notice">
+
+                <span>⚠️</span>
+
+                <div>
+                    <strong>Important safety notice</strong>
+
+                    <p>
+                        This is an educational research prototype,
+                        not a medical diagnostic or treatment tool.
+                        Seek professional medical care when needed.
+                    </p>
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Bottom Navigation -->
+
+        <nav class="bottom-nav">
+
+            <a href="#home">
+                <span>⌂</span>
+                <small>Home</small>
+            </a>
+
+            <a href="#assistant">
+                <span>✧</span>
+                <small>Assistant</small>
+            </a>
+
+            <a href="#recovery">
+                <span>♡</span>
+                <small>Recovery</small>
+            </a>
+
+        </nav>
+
+
+        <footer>
+            HEATWISE · EDUCATIONAL RESEARCH PROTOTYPE
+        </footer>
+
+    </div>
 
 
     <script src="script.js"></script>
