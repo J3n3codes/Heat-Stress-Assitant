@@ -32,7 +32,7 @@ async function loadChatbotData() {
         trainingExamples = parseCSV(csvData);
 
         addMessage(
-            "Chatbot is ready! You can enter a question or keyword.",
+            "Need assiatance! You can enter a question or keyword.",
             "bot"
         );
 
