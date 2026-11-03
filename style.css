@@ -662,3 +662,38 @@ footer {
     }
 
 }
+
+/* Hydration section background */
+
+.hydration-section {
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("juice.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    border-radius: 22px;
+    padding: 22px;
+}
+
+/* Keep hydration text readable */
+
+.hydration-section h2,
+.hydration-section p {
+    color: white;
+}
+
+/* Hydration cards */
+
+.hydration-section .drink-card {
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+}
